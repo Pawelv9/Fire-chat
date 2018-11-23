@@ -1,6 +1,7 @@
 import { database } from "../firebase";
 
-const usersRef = database.ref('users');
+const usersRef = database.ref("users");
+
 
 export const addUser = (user) => {
   return {
@@ -17,4 +18,4 @@ export const startListeningForUsers = () => {
       dispatch(addUser(snapshot.val()));
     });
   };
-}
+};

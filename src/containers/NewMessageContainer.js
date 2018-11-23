@@ -12,7 +12,7 @@ const mapDispatchToProps = (dispatch) => {
     handleChange(event) { dispatch(updateNewMessage(event.target.value)); },
     handleSubmit(event, content, uid) {
       event.preventDefault();
-      dispatch(createMessage(Date.now(), { content, uid }));
+      dispatch(createMessage({ content, uid }));
       dispatch(clearNewMessage());
     }
   };
